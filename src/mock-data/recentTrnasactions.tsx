@@ -1,0 +1,42 @@
+export const recentTransactions = [
+  {
+    id: 1,
+    date: "2026-01-20",
+    description: "Salary Payment",
+    amount: 950000,
+    type: "credit",
+    category: "Salary",
+  },
+  {
+    id: 2,
+    date: "2026-01-18",
+    description: "Client Invoice Payment",
+    amount: 350000,
+    type: "credit",
+    category: "Business",
+  },
+  {
+    id: 3,
+    date: "2026-01-15",
+    description: "Dividend Payment",
+    amount: 75000,
+    type: "credit",
+    category: "Investment",
+  },
+  {
+    id: 4,
+    date: "2026-01-12",
+    description: "Consulting Fee",
+    amount: 180000,
+    type: "credit",
+    category: "Business",
+  },
+  {
+    id: 5,
+    date: "2026-01-10",
+    description: "Freelance Project",
+    amount: 120000,
+    type: "credit",
+    category: "Business",
+  },
+];

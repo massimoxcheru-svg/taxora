@@ -1,0 +1,51 @@
+// Nigeria 2026 PIT Tax Bands
+export const taxBands = [
+  {
+    band: "First ₦300K",
+    rate: "7%",
+    min: 0,
+    max: 300000,
+    taxAmount: 21000,
+    color: "#3b82f6",
+  },
+  {
+    band: "Next ₦300K",
+    rate: "11%",
+    min: 300000,
+    max: 600000,
+    taxAmount: 33000,
+    color: "#10b981",
+  },
+  {
+    band: "Next ₦500K",
+    rate: "15%",
+    min: 600000,
+    max: 1100000,
+    taxAmount: 75000,
+    color: "#8b5cf6",
+  },
+  {
+    band: "Next ₦500K",
+    rate: "19%",
+    min: 1100000,
+    max: 1600000,
+    taxAmount: 95000,
+    color: "#f59e0b",
+  },
+  {
+    band: "Next ₦1.6M",
+    rate: "21%",
+    min: 1600000,
+    max: 3200000,
+    taxAmount: 336000,
+    color: "#ef4444",
+  },
+  {
+    band: "Above ₦3.2M",
+    rate: "24%",
+    min: 3200000,
+    max: Infinity,
+    taxAmount: 0,
+    color: "#dc2626",
+  },
+];

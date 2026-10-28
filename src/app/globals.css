@@ -1,0 +1,208 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* SUPABASE LIGHT MODE - Clean, Stark, Neon Green Accent */
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(0 0% 11%); /* Extremely dark gray */
+  
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(0 0% 11%);
+  
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(0 0% 11%);
+  
+  --primary: hsl(158 64% 39%); /* Emerald Green */
+  --primary-foreground: hsl(0 0% 100%);
+  
+  --secondary: hsl(0 0% 96.1%);
+  --secondary-foreground: hsl(0 0% 11%);
+  
+  --muted: hsl(0 0% 96.1%);
+  --muted-foreground: hsl(0 0% 45.1%);
+  
+  --accent: hsl(0 0% 96.1%);
+  --accent-foreground: hsl(0 0% 11%);
+  
+  --destructive: hsl(0 84.2% 60.2%);
+  --destructive-foreground: hsl(0 0% 98%);
+  
+  --border: hsl(0 0% 89.8%);
+  --input: hsl(0 0% 89.8%);
+  --ring: hsl(158 64% 39%);
+  
+  /* VS Code-inspired sharp radius */
+  --radius: 0.125rem;
+  
+  --sidebar-background: hsl(0 0% 98%);
+  --sidebar-foreground: hsl(240 5.3% 26.1%);
+  --sidebar-primary: hsl(158 64% 39%);
+  --sidebar-primary-foreground: hsl(0 0% 98%);
+  --sidebar-accent: hsl(0 0% 94%);
+  --sidebar-accent-foreground: hsl(0 0% 11%);
+  --sidebar-border: hsl(0 0% 89.8%);
+  --sidebar-ring: hsl(158 64% 39%);
+
+  /* VS Code workbench spacing tokens */
+  --vsc-spacing-xs: 4px;
+  --vsc-spacing-sm: 6px;
+  --vsc-spacing-md: 8px;
+  --vsc-spacing-lg: 12px;
+  --vsc-titlebar-h: 35px;
+  --vsc-statusbar-h: 22px;
+  --vsc-panel-header-h: 28px;
+  --vsc-row-h: 22px;
+  --vsc-activity-w: 48px;
+  --vsc-sidebar-w: 280px;
+}
+
+.dark {
+  /* SUPABASE DARK MODE - Deep Charcoal, Neon Matrix Green Accent */
+  --background: hsl(0 0% 11%); /* #1C1C1C */
+  --foreground: hsl(0 0% 93%); /* #EDEDED */
+
+  --card: hsl(0 0% 14%); /* #232323 */
+  --card-foreground: hsl(0 0% 93%);
+
+  --popover: hsl(0 0% 14%);
+  --popover-foreground: hsl(0 0% 93%);
+
+  --primary: hsl(153 60% 53%); /* #3ECF8E Supabase neon brand green */
+  --primary-foreground: hsl(0 0% 11%); /* Dark text on neon green */
+
+  --secondary: hsl(0 0% 18%); /* #2D2D2D */
+  --secondary-foreground: hsl(0 0% 93%);
+
+  --muted: hsl(0 0% 18%);
+  --muted-foreground: hsl(0 0% 63%); /* #A1A1A1 */
+
+  --accent: hsl(0 0% 18%);
+  --accent-foreground: hsl(0 0% 93%);
+
+  --destructive: hsl(0 62.8% 40.6%);
+  --destructive-foreground: hsl(0 0% 98%);
+
+  --border: hsl(0 0% 18%); /* #2E2E2E Thin, strict borders */
+  --input: hsl(0 0% 18%);
+  --ring: hsl(153 60% 53%);
+
+  --sidebar-background: hsl(0 0% 11%); /* Seamless void with background */
+  --sidebar-foreground: hsl(0 0% 85%); 
+  --sidebar-primary: hsl(153 60% 53%);
+  --sidebar-primary-foreground: hsl(0 0% 11%);
+  --sidebar-accent: hsl(0 0% 15%);
+  --sidebar-accent-foreground: hsl(0 0% 93%);
+  --sidebar-border: hsl(0 0% 15%);
+  --sidebar-ring: hsl(153 60% 53%);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-sidebar: var(--sidebar-background);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --radius-sm: calc(var(--radius) - 1px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", system-ui, "Ubuntu", "Droid Sans", sans-serif;
+  font-size: 13px;
+  line-height: 1.4em;
+}
+
+/* VS Code monospace for data values */
+.font-mono {
+  font-family: "SF Mono", Monaco, Menlo, Consolas, "Courier New", monospace !important;
+  font-size: 13px;
+}
+
+/* Custom selection color */
+::selection {
+  background: hsl(153 60% 53% / 0.3);
+  color: inherit;
+}
+
+/* VS Code-style scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(0 0% 40% / 0.4);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(0 0% 40% / 0.7);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: hsl(0 0% 50% / 0.3);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: hsl(0 0% 50% / 0.6);
+}
+
+/* VS Code panel header style */
+.vsc-panel-header {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: var(--vsc-panel-header-h);
+  height: var(--vsc-panel-header-h);
+}
+
+/* VS Code status bar */
+.vsc-statusbar {
+  height: var(--vsc-statusbar-h);
+  font-size: 12px;
+  line-height: var(--vsc-statusbar-h);
+}
+
+/* VS Code row sizing for lists/tables */
+.vsc-row {
+  height: var(--vsc-row-h);
+  line-height: var(--vsc-row-h);
+}
