@@ -1,19 +1,23 @@
 # Taxora
 
-A tax management and filing platform for Nigeria, built around the 2026 Nigerian tax law. It gives individuals and small businesses one place to record income, find the deductions they are entitled to, see their exact tax liability, and prepare reports for the Federal Inland Revenue Service and the state revenue services.
+A tax management and filing platform for people in the United States. It gives individuals and small businesses one place to record income, find the deductions and credits they are entitled to, see their federal tax liability, and prepare what they need for filing with the IRS.
 
 This is my own project. The frontend is working and the backend is the next phase.
 
 ## Status
 
-The web app runs with demo data held in a React Context store, so you can open the dashboard and use every screen straight away. Nothing is persisted yet: there is no sign in, no database and no API. See [ROADMAP.md](ROADMAP.md) for the order I intend to build those in.
+The web app runs with demo data held in a React Context store, so you can open the dashboard and use every screen straight away. Nothing is persisted yet: there is no sign in, no database and no API.
+
+The code base started life as a version for Nigeria, and the tax engine, deduction rules, filing checklist and page copy still follow the 2026 Nigerian personal income tax law. Moving all of that to US federal income tax is the first item in [ROADMAP.md](ROADMAP.md), followed by accounts and a real backend.
 
 ## What works today
 
-- Tax engine for the 2026 Personal Income Tax rules: the consolidated relief allowance, the 800,000 naira threshold below which no tax is due, and the progressive bands from 7% to 24%. There is an early version of the Corporate Income Tax tiers as well.
+All of this works against the Nigerian rules until the US conversion lands.
+
+- Tax engine with a tax free threshold, a relief allowance and progressive bands, plus an early version of corporate tax tiers.
 - Income sources: add, edit and remove sources and see the effect on the final liability immediately.
-- Deduction suggestions: the app compares your income profile with the deductions available in Nigeria, such as NHF, life assurance and rent relief, and shows the saving each one would give.
-- Tax simulator: charts that show how gross income, the relief allowance and deductions lead to chargeable income.
+- Deduction suggestions: the app compares your income profile with the deductions available and shows the saving each one would give.
+- Tax simulator: charts that show how gross income, reliefs and deductions lead to taxable income.
 - Filing and reports: a checklist of what is still needed before filing, plus a CSV export with the full calculation.
 - Compliance score: a 0 to 100 figure that tracks how complete the profile is.
 - Filing assistant: a floating panel that points out risky situations and suggests the next action.
@@ -61,21 +65,6 @@ src/lib/                 tax engine, deduction suggestions, compliance and filin
 src/mock-data/           demo data loaded into the context store
 public/images/           static images
 ```
-
-## 2026 Personal Income Tax reference
-
-The engine applies these rules for individual taxpayers:
-
-1. Consolidated relief allowance: the larger of 200,000 naira and 1% of gross income, plus 20% of gross income.
-2. Taxable income: gross income less the relief allowance and eligible deductions.
-3. If taxable income is 800,000 naira or less, no tax is due.
-4. Above that, the bands apply in order:
-   - first 300,000 at 7%
-   - next 300,000 at 11%
-   - next 500,000 at 15%
-   - next 500,000 at 19%
-   - next 1,600,000 at 21%
-   - everything above 3,200,000 at 24%
 
 ## License
 
